@@ -42,7 +42,7 @@ public class TcpClient {
 			String sendMsg = null;
 			while(true) {
 				System.out.println("메세지>> ");
-				sendMsg = stdIn.readLine();		// consol에 입력한 문자 읽어들이기
+				sendMsg = stdIn.readLine();		// console에 입력한 문자 읽어들이기
 				System.out.println("#####"+sendMsg);
 				
 				pw.println(sendMsg);

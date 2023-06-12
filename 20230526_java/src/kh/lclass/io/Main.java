@@ -19,8 +19,8 @@ public class Main {
 //			e.printStackTrace();
 //		}
 //		new TestFileIO().testFileReadData();
-		new TestFileIO().testFileOutputStreamObject();
-		new TestFileIO().testFileInputStreamObject();
+//		new TestFileIO().testFileOutputStreamObject();
+//		new TestFileIO().testFileInputStreamObject();
 		
 		System.out.println("=== main끝 ===");
 
