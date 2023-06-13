@@ -8,10 +8,10 @@ import java.net.SocketException;
 public class UdpEchoReceiver {
 
 	public static void main(String[] args) {
-		new UdpEchoReceiver().receiverUpd();
+		new UdpEchoReceiver().receiverUdp();
 	}
 	
-	public void receiverUpd() {
+	public void receiverUdp() {
 		// 포트번호 정함
 		int myPort = 6001;
 //		int destPort = 5001;
@@ -36,8 +36,8 @@ public class UdpEchoReceiver {
 //				System.out.println(receivedData.getAddress());	// 전달받은 메시지의 발신IP
 //				System.out.println(receivedData.getPort());		// 전달받은 메시지의 발신Port
 				
-				String receiverStr = new String(receivedData.getData());
-				System.out.println("수신메시지 : " + receiverStr);
+				String receivedStr = new String(receivedData.getData());
+				System.out.println("수신메시지 : " + receivedStr);
 			
 				// Echo 메시지 송신
 //				5. 전송할 메시지를 DatagramPacket 객체에 담음

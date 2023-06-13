@@ -1,4 +1,4 @@
-package kh.lclass.tcp;
+package kh.lclass.udp;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -41,7 +41,6 @@ public class UdpEchoSender {
 				break;
 			}
 			
-			
 			InetAddress destIp = null;
 			try {
 				// 메시지 전달
@@ -63,6 +62,7 @@ public class UdpEchoSender {
 			
 			// 메시지 수신
 			byte[] byteMsg = new byte[1000];
+			// 수신받을 메시지를 DatagramPacket 객체에 담음
 			DatagramPacket receivedData = new DatagramPacket(byteMsg,byteMsg.length);
 			dSock.receive(receivedData);
 			// 전달받은 메시지 정보들
@@ -72,8 +72,8 @@ public class UdpEchoSender {
 //			System.out.println(receivedData.getLength());
 //			System.out.println(receivedData.getAddress());	// 전달받은 메시지의 발신IP
 //			System.out.println(receivedData.getPort());		// 전달받은 메시지의 발신Port
-			String receiverStr = new String(receivedData.getData());
-			System.out.println("Echo메시지 : " + receiverStr);
+			String receivedStr = new String(receivedData.getData());
+			System.out.println("Echo메시지 : " + receivedStr);
 			
 		}
 		} catch (SocketException e) {
@@ -81,9 +81,8 @@ public class UdpEchoSender {
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {
-			if(br != null)
 				try {
-					br.close();
+					if(br != null) br.close();
 				} catch (IOException e) {
 					e.printStackTrace();
 				}
