@@ -32,6 +32,8 @@ public class TcpServer {
 			// 3. 클라이언트 쪽에서 접속 요청이 오길 기다림
 			// 4. 접속 요청이 오면 요청 수락 후 해당 클라이언트에 대한 소켓 객체 생성
 			sc = ss.accept();
+			
+			
 			System.out.println("서버(나의) 포트:"+sc.getLocalPort());	// 9001
 			System.out.println("클라이언트 Port:"+sc.getPort());	//	자동바뀐
 			System.out.println("클라이언트 IP:"+sc.getInetAddress().toString());	//  /127.0.0.1
