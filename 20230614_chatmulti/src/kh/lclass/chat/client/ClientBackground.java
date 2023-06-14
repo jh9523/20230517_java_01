@@ -15,18 +15,17 @@ public class ClientBackground {
 	private ClientGUI gui;	// null // 선언은 하면 안됨 = new
 	
 	// client가 서버와 접속 끊기
-	public void disconnetction() {
+	public void disconnection() {
 		try {
 			if(socket != null) {
 				socket.close();
 			}
 		} catch (Exception e) {
-			e.printStackTrace();
 		}
 	}
 	
 	// client가 서버에 접속 - 
-		public void connetction() {
+		public void connection() {
 			try {
 				// 서버와 연결
 				socket = new Socket("127.0.0.1", 7777);

@@ -69,7 +69,6 @@ public class ServerBackground {
 	class Client extends Thread{
 		private BufferedReader br;
 		private BufferedWriter bw;
-		private String nickname;
 		public Client(Socket socket) {
 			// 초기값 설정
 			// client와 입/출력 통로 생성

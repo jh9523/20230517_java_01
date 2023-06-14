@@ -39,7 +39,7 @@ public class ClientGUI extends JFrame implements ActionListener{
 		
 		cb.setNickname(nickname);;
 		cb.setGui(this);
-		cb.connetction();
+		cb.connection();
 	}
 	
 	//TODO 새 메시지를 받았을때 메소드 호출됨.
